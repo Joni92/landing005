@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Transform Effects on Page Scroll</title>
+</head>
+<body>
+    <h3>Scroll Down</h3>
+    <h2 class="text">Scroll to see Magic</h2>
+    <section>
+        <h2 class="innerText">Scroll to see Magic</h2>
+    </section>
+    <div class="container">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nostrum!</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quos, impedit nemo aut beatae ullam doloremque neque quibusdam aliquid tempora veritatis ratione eligendi mollitia labore necessitatibus quisquam adipisci nobis delectus commodi maxime quia dicta aspernatur molestias? Perspiciatis ipsa maxime officiis! Praesentium quaerat, itaque perferendis cumque unde eveniet voluptas tempore nemo tenetur, amet iste neque earum hic nesciunt sunt inventore error. Pariatur dolore quod impedit? Labore id fugit doloribus, blanditiis totam laudantium harum modi ducimus, iusto, aspernatur illum sequi voluptate voluptatem perferendis facilis optio nostrum culpa adipisci ullam nihil. Quos nam rerum similique labore culpa atque blanditiis alias excepturi! Hic, necessitatibus.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit libero est laboriosam quod qui, nostrum voluptate ab sit voluptas accusantium provident, deserunt et harum atque magnam. Atque fuga corporis consequuntur fugiat rem adipisci id possimus architecto ab optio. Velit perspiciatis facere nesciunt, maiores quis nihil labore quos accusantium facilis ratione.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit libero est laboriosam quod qui, nostrum voluptate ab sit voluptas accusantium provident, deserunt et harum atque magnam. Atque fuga corporis consequuntur fugiat rem adipisci id possimus architecto ab optio. Velit perspiciatis facere nesciunt, maiores quis nihil labore quos accusantium facilis ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint non laboriosam nobis eius doloremque, voluptate maiores ratione perspiciatis pariatur, officiis vero voluptatum, corrupti soluta autem nihil sequi enim quisquam deserunt molestias in quos. Iste assumenda architecto quia, eius, magnam ullam veniam fuga magni exercitationem quae doloremque sed laboriosam dignissimos minima cupiditate saepe velit odit totam praesentium! Earum distinctio consequatur ex nam sunt nulla fuga nobis quam ea voluptatem aspernatur doloribus laboriosam soluta necessitatibus ratione blanditiis perferendis, quidem alias non! Quisquam, sint facere veniam aspernatur soluta quaerat labore. Saepe consequatur modi sequi ducimus quam id temporibus quasi labore necessitatibus recusandae.
+        </p>
+    </div>
+
+    <script>
+        let section = document.querySelector('section');
+        let text = document.querySelector('.text');
+        let innerText = document.querySelector('.innerText');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            section.style.clipPath = "circle("+ value +"px at center center)";
+            text.style.left = 100 - value / 5 + '%';
+            innerText.style.left = 100 - value / 5 + '%';
+        })
+    </script>
+</body>
+</html> 
